@@ -3,12 +3,21 @@ from __future__ import unicode_literals
 
 from setuptools import find_packages, setup
 
+import re
+
+def get_version(filename):
+    content = open(filename).read()
+    metadata = dict(re.findall('__([a-z]+)__ = "([^"]+)"', content))
+    return metadata['version']
+
+module_version =  get_version('mopidy_dam1021/__init__.py')
+
 setup(
     name='Mopidy-dam1021',
-    version="0.1",
+    version=module_version,
     url='https://github.com/fortaa/mopidy-dam1021',
     license='Apache License, Version 2.0',
-    download_url = 'https://github.com/fortaa/mopidy-dam1021/tarball/0.1',
+    download_url = 'https://github.com/fortaa/mopidy-dam1021/tarball/%s' % module_version,
     author="Forta(a)",
     author_email="fortaa@users.noreply.github.com",
     description='Mopidy extension for controlling volume on a dam1021 DAC',
