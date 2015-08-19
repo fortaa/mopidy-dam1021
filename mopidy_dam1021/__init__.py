@@ -10,7 +10,7 @@ from mopidy import config, ext
 __author__ = "Forta(a)"
 __copyright__ = "Copyright 2015, Forta(a)"
 
-__version__ = "0.2"
+__version__ = "0.4"
 __maintainer__ = "Forta(a)"
 __status__ = "Alpha"
 
