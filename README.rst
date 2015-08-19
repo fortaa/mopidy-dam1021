@@ -34,7 +34,7 @@ The following properties are available:
 
 - ``serial``: The serial device to use, defaults to ``/dev/ttyAMA0``. This must be set correctly for the mixer to work.
 
-- ``volume_inf``: The DAC volume control utilizes idea of signal attenuation in a digital domain, where ``0`` means unaltered signal, ``-99`` - maximal attenuation, ``15`` - maximal gain. This property defines lower bound of volume levels available to the mixer. Usually you should operate between ``-99`` and ``0``. Using narrower margins translates to a finer volume control. Defaults to ``-99``. 
+- ``volume_inf``: The DAC volume control utilizes idea of signal attenuation in a digital domain, where ``0`` means unaltered signal, ``-80`` - maximal attenuation, ``10`` - maximal gain. This property defines lower bound of volume levels available to the mixer. Usually you should operate between ``-80`` and ``0``. Using narrower margins translates to a finer volume control. Defaults to ``-80``. 
 
 - ``volume_sup``: The upper bound of volume levels available to the mixer. See ``volume_inf``. Defaults to ``0``. 
 
